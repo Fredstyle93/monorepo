@@ -23,7 +23,7 @@ services:
     networks:
       - app_network
 
-  backend:  # This was incorrectly indented in your provided YAML
+  backend:
     container_name: backend
     build:
       context: .
@@ -31,6 +31,17 @@ services:
     restart: always
     ports:
       - "4001:4001"
+    networks:
+      - app_network
+
+  designsystem:
+    container_name: designsystem
+    build:
+      context: .
+      dockerfile: ./apps/designsystem/Dockerfile
+    restart: always
+    ports:
+      - "6006:6006"
     networks:
       - app_network
 

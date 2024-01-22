@@ -16,6 +16,8 @@ build
 # other
 dist/
 
+apps/designsystem/storybook-static
+
 # misc
 .DS_Store
 *.pem
